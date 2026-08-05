@@ -1,0 +1,77 @@
+version: "4.1"
+name: stepper_motor_example_LP_MSPM0G3507_nortos_ticlang
+type: ANY-GCC
+deviceName: null
+packDir: null
+srcDirs:
+  - App/StepperDemo
+  - Drivers/BNO085
+  - Drivers/Sensor
+  - Drivers/StepperMotor
+  - Drivers/MSPM0
+  - Drivers/OLED_Hardware_I2C
+  - targetConfigs
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 17db2ec7ef527552a62f61df9adce77d
+targets:
+  Debug:
+    cppPreprocessAttrs:
+      defineList: []
+      incList: []
+      libList: []
+    excludeList: []
+    toolchain: ANY_GCC
+    toolchainConfigMap:
+      ANY_GCC:
+        linkerScriptPath: ""
+        options:
+          version: 2
+          afterBuildTasks: []
+          asm-compiler:
+            ASM_FLAGS: ""
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: ""
+            C_FLAGS: ""
+            language-c: c11
+            language-cpp: c++11
+            one-elf-section-per-data: true
+            one-elf-section-per-function: true
+            optimization: level-debug
+            signed-char: true
+          global:
+            misc-control:
+              - DEVICE_CONFIGURATION_ID=Cortex M.MSPM0G3507
+              - DEVICE_CORE_ID=
+              - DEVICE_ENDIANNESS=little
+              - OUTPUT_FORMAT=ELF
+              - CCS_MBS_VERSION=70.0.0
+              - RUNTIME_SUPPORT_LIBRARY=
+              - OUTPUT_TYPE=executable
+              - PRODUCTS=MSPM0-SDK:2.5.1.00;sysconfig:1.24.0;
+              - PRODUCT_MACRO_IMPORTS={"MSPM0-SDK":["${COM_TI_MSPM0_SDK_INCLUDE_PATH}","${COM_TI_MSPM0_SDK_LIBRARY_PATH}","${COM_TI_MSPM0_SDK_LIBRARIES}","${COM_TI_MSPM0_SDK_SYMBOLS}","${COM_TI_MSPM0_SDK_SYSCONFIG_MANIFEST}"],"sysconfig":["${SYSCONFIG_TOOL_INCLUDE_PATH}","${SYSCONFIG_TOOL_LIBRARY_PATH}","${SYSCONFIG_TOOL_LIBRARIES}","${SYSCONFIG_TOOL_SYMBOLS}","${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}"]}
+            output-debug-info: enable
+          linker:
+            $disableOutputTask: true
+            LD_FLAGS: ""
+            LIB_FLAGS: ""
+            output-format: elf
+            print-mem-usage: true
+            remove-unused-input-sections: true
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+    uploader: JLink

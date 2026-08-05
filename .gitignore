@@ -1,0 +1,45 @@
+# CCS / SysConfig 构建产物
+Debug/
+Release/
+*.o
+*.d
+*.d_raw
+*.out
+*.map
+*.hex
+*.bin
+*.obj
+*.elf
+*.lst
+*.xml
+device.cmd.genlibs
+device.opt
+device_linker.cmd
+Event.dot
+
+# CCS 用户状态
+.ccsproject.user
+.settings/
+.metadata/
+
+# 调试与临时文件
+tmp/
+logs/
+production/
+*.log
+*.csv
+*.bak
+*.tmp
+__pycache__/
+
+# 本地打包文件
+*.zip
+Thumbs.db
+.DS_Store
+
+# 密钥与本地环境
+.env
+.env.*
+*.key
+*.pem
+secrets.*
